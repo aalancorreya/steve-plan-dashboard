@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Steve Plan Dashboard</title>
+<meta name="description" content="Public-safe read-only mirror of Steve's operating plan." />
+<style>
+:root{color-scheme:dark;--bg:#080a0f;--panel:#111722;--panel2:#151d2a;--ink:#f8fafc;--muted:#94a3b8;--line:#263244;--blue:#60a5fa;--green:#34d399;--amber:#fbbf24;--grey:#94a3b8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,rgba(96,165,250,.18),transparent 34rem),var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif}
+.shell{max-width:1040px;margin:0 auto;padding:42px 20px 52px}.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800}h1{font-size:clamp(36px,7vw,68px);line-height:.95;letter-spacing:-.06em;margin:10px 0 14px}.sub{color:var(--muted);max-width:760px;font-size:17px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}.metric{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)),var(--panel);border:1px solid var(--line);border-radius:20px;padding:17px}.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.value{font-size:30px;font-weight:850;margin-top:4px;font-variant-numeric:tabular-nums}.bar{height:11px;background:#070a10;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:22px 0 30px}.fill{height:100%;width:80%;background:linear-gradient(90deg,var(--green),var(--blue))}.items{display:grid;gap:11px}.item{display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center;background:rgba(17,23,34,.82);border:1px solid var(--line);border-radius:18px;padding:16px 18px}.item h3{margin:0 0 3px;font-size:18px;letter-spacing:-.02em}.item p{margin:0;color:var(--muted)}.status{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.done .status{color:var(--green)}.progress .status{color:var(--amber)}.todo .status{color:var(--grey)}.cat{border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.note{margin-top:24px;padding:14px 16px;border:1px solid rgba(96,165,250,.25);background:rgba(96,165,250,.07);border-radius:16px;color:#bfdbfe}footer{margin-top:22px;color:#64748b;font-size:13px}@media(max-width:760px){.metrics{grid-template-columns:1fr 1fr}.item{grid-template-columns:1fr;gap:8px}.cat{width:max-content}}@media(max-width:480px){.metrics{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main class="shell">
+  <div class="eyebrow">Steve operating dashboard</div>
+  <h1>Plan vs shipped</h1>
+  <p class="sub">A public-safe, read-only mirror of Steve's current operating plan. The live editable dashboard, private notes, local metrics, and internal context stay off GitHub.</p>
+  <section class="metrics" aria-label="Progress metrics">
+    <div class="metric"><div class="label">Complete</div><div class="value">30%</div></div>
+    <div class="metric"><div class="label">Done</div><div class="value">3</div></div>
+    <div class="metric"><div class="label">In progress</div><div class="value">5</div></div>
+    <div class="metric"><div class="label">Queued</div><div class="value">2</div></div>
+  </section>
+  <div class="bar" title="Done + in progress"><div class="fill"></div></div>
+  <section class="items">
+    <article class="item done">
+  <div class="status">Done</div>
+  <div><h3>Daily briefings</h3><p>Keep the morning readout concise and useful.</p></div>
+  <div class="cat">operations</div>
+</article><article class="item progress">
+  <div class="status">In progress</div>
+  <div><h3>Agent capability loop</h3><p>Continue improving reusable assistant workflows.</p></div>
+  <div class="cat">automation</div>
+</article><article class="item progress">
+  <div class="status">In progress</div>
+  <div><h3>Automation quality cleanup</h3><p>Tighten recurring job output so reports stay crisp.</p></div>
+  <div class="cat">automation</div>
+</article><article class="item done">
+  <div class="status">Done</div>
+  <div><h3>Delegation drill</h3><p>Verify bounded handoffs and result checking.</p></div>
+  <div class="cat">automation</div>
+</article><article class="item progress">
+  <div class="status">In progress</div>
+  <div><h3>Secondary-agent uplift</h3><p>Improve parallel support without exposing private context.</p></div>
+  <div class="cat">automation</div>
+</article><article class="item done">
+  <div class="status">Done</div>
+  <div><h3>Cloneability hygiene</h3><p>Keep useful setup knowledge reproducible.</p></div>
+  <div class="cat">systems</div>
+</article><article class="item todo">
+  <div class="status">Queued</div>
+  <div><h3>Workspace readiness</h3><p>Improve repository and productivity-tool access where practical.</p></div>
+  <div class="cat">systems</div>
+</article><article class="item progress">
+  <div class="status">In progress</div>
+  <div><h3>Response quality</h3><p>Stay concise, direct, and operator-style.</p></div>
+  <div class="cat">quality</div>
+</article><article class="item progress">
+  <div class="status">In progress</div>
+  <div><h3>Privacy guardrails</h3><p>Keep private context out of public/team-visible surfaces.</p></div>
+  <div class="cat">quality</div>
+</article><article class="item todo">
+  <div class="status">Queued</div>
+  <div><h3>End-of-day handoff</h3><p>Leave a clean progress trail for the next working block.</p></div>
+  <div class="cat">operations</div>
+</article>
+  </section>
+  <div class="note"><strong>Privacy rule:</strong> this page is intentionally sanitised. It does not include live edit controls, local paths, session logs, LLM usage, secrets, private family details, or exec-sensitive work context.</div>
+  <footer>Exported 2026-05-16 03:03 UTC · Source of truth remains Steve's local dashboard.</footer>
+</main></body></html>
