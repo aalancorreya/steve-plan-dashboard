@@ -12,4 +12,4 @@ Live page: https://aalancorreya.github.io/steve-plan-dashboard/
 - No local paths, session logs, LLM usage, secrets, private family details, or exec-sensitive work context are published.
 - Source of truth remains the local Steve dashboard on `marketings-mac-mini`.
 
-Last export: 2026-05-20 14:00 UTC
+Last export: 2026-05-20 15:00 UTC
